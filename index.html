@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>City Air Hack</title>
+  <link href="./index.css" rel="stylesheet" />
+</head>
+<body>
+
+  <section id="intro">
+      <h1>Web application for</h1>
+
+      <img src="./cover.png" alt="cover photo" width="100%" />
+  </section>
+
+  <section id="explication" class="container">
+    <h2>Cum funcționează?</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium corrupti voluptates molestiae adipisci nihil corporis, unde dignissimos modi! Voluptatibus, neque. Porro minus temporibus dolorem nesciunt, deleniti similique illum error exercitationem.</p>
+    <img src="./cover.png" alt="raspberry" width="300" />
+    <img src="./cover.png" alt="raspberry" width="300" />
+  </section>
+
+  <section id="formular" class="container">
+    <h2>Formularul</h2>
+    <p>Aici selectezi data pentru care vrei să vezi informații.</p>
+    <form action="somefile.php" method="GET">
+        <div>
+            <label for="date">Data:</label>
+            <input type="date" name="date">
+        </div>
+        <div>
+          <input type="submit" value="Trimite">
+        </div>
+      </form>
+  </section>
+  
+  <section id="results" class="container">
+    <h2>Results</h2>
+    <section id="temperature">
+        <canvas id="temperature-chart"></canvas>
+    </section>
+    
+    <section id="humidity">
+      <canvas id="humidity-chart"></canvas>
+    </section>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="./utils.js"></script>
+  <script>
+    const temperatureData = {
+      labels: ['January', 'February', 'March'],
+      datasets: [{
+          label: 'Temperature in C',
+          backgroundColor: [randomColor(), randomColor(), randomColor()],
+          data: [7, 10, 5]
+      }]
+    };
+  </script>
+  <script src="./pie.js"></script>
+  <script src="./line.js"></script>
+</body>
+</html>
